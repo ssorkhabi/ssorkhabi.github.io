@@ -263,6 +263,7 @@ footer {
   margin: 2.2rem 0 4rem 3rem;
   list-style: none;
   display: block;
+  color: var(--text);
 }
 
 .short-cv li {
@@ -270,6 +271,7 @@ footer {
   list-style: none;
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: var(--text);
 }
 
 /* CV titles */
@@ -277,6 +279,7 @@ footer {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: var(--text);
 }
 
 /* CV dates */
