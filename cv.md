@@ -4,8 +4,34 @@ title: CV
 permalink: /cv/
 ---
 
-**2026 – present**  Research Assistant, University of Cambridge
+<div class="cv-layout">
 
-**2025 – 2026**  MPhil Zoology (by thesis), University of Cambridge
+  <img class="cv-photo" src="{{ '/vis/photo.png' | relative_url }}" alt="S. Wren Sorkhabi" />
 
-**2021 – 2025**  BSc Biomedical Sciences, University College London
+  <div class="short-cv">
+    <ul>
+      <li id="cv-name">S. Wren Sorkhabi</li>
+    </ul>
+
+    <ul>
+      <li>
+        <span class="dates-cv">2026 – present</span> <span class="bar-cv">|</span>
+        <div class="title-cv">Research Assistant</div>
+        <div class="unis-cv">University of Cambridge</div>
+      </li>
+
+      <li>
+        <span class="dates-cv">2025 – 2026</span> <span class="bar-cv">|</span>
+        <div class="title-cv">MPhil Zoology (by thesis)</div>
+        <div class="unis-cv">University of Cambridge</div>
+      </li>
+
+      <li>
+        <span class="dates-cv">2021 – 2025</span> <span class="bar-cv">|</span>
+        <div class="title-cv">BSc Biomedical Sciences</div>
+        <div class="unis-cv">University College London</div>
+      </li>
+    </ul>
+  </div>
+
+</div>
