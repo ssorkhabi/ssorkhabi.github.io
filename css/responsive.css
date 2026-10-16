@@ -3,43 +3,16 @@
     width: 85%;
   }
 
-  .nav-bar {
-    display: none;
-  }
-
-  .nav-bar-bottom {
-    display: block;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
-    font-style: normal;
-    list-style: none;
-    font-weight: 500;
-    font-size: large;
-    text-align: center;
-    overflow: hidden;
-    position: sticky;
-    bottom: 0rem;
-    border-top: 1px solid #d5d5d5;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-
-  .nav-bar-bottom li a {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-
   footer {
     width: 85%;
   }
 
+  /* RESEARCH */
+
   .rsrcht {
     width: 100%;
     font-size: 3rem;
-    color: #6a2b54;
-    font-family: "Adobe Garamond Pro";
-    padding-bottom: 0px;
+    padding-bottom: 0;
     margin-bottom: 1px;
   }
 
@@ -47,6 +20,12 @@
     width: 100%;
   }
 
+  .rimg {
+    height: auto;
+    width: 100%;
+  }
+
+  /* CV */
 
   #cv-name {
     text-align: center;
@@ -57,31 +36,18 @@
   .namecv {
     font-size: x-large;
     line-height: 1.4em;
-    color: #333;
+    color: var(--text);
     position: relative;
     text-align: left;
     font-weight: 400;
-    font-family: "Source Sans Pro", "Sans-Serif";
-  }
-
-  .rimg {
-    text-align: center;
-    display: block;
-    height: auto;
-    width: 100%;
-  }
-
-  /* CV */
-  .short-cv {
-    width: 100%;
-    margin-left: 0%;
   }
 
   .short-cv {
-    margin-top: 4rem;
+    width: 100%;
+    margin: 4rem 0 10rem 0;
   }
 
   .short-cv ul {
-    margin-left: 0rem;
+    margin-left: 0;
   }
 }
