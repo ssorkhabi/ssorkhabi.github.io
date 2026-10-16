@@ -6,8 +6,6 @@ permalink: /cv/
 
 <div class="cv-layout">
 
-  <img class="cv-photo" src="{{ '/vis/photo.png' | relative_url }}" alt="S. Wren Sorkhabi" />
-
   <div class="short-cv">
 
     <ul>
