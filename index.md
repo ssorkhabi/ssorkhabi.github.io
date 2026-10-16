@@ -8,3 +8,6 @@ I am a research assistant in the [Insect Evolution and Genomics Group](https://w
 
 My research interests include population genomics, evolutionary ecology, adaptive potential, and climate change.
 {: .lighter}
+
+Inspired by the mentors whose help has shaped my career, I am passionate about accessibility, outreach, and widening participation. Outside of work, I read, craft, and wander around looking for cool plants and insects — sometimes drawing what I see (very amateurly).
+{: .lighter}
