@@ -1,18 +1,9 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Home
+permalink: /home/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a research assistant at the [Insect Evolution and Genomics Group](https://www.heliconius.zoo.cam.ac.uk/), Department of Zoology, University of Cambridge. My current research interests include population genomics, altitude adaption, evolutionary ecology, and climate change.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+In my free time, I read, draw, and frolic. Sometimes, I muse about these (and more) [here](ssorkhabi.github.io/musings).
