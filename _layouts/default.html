@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    <!-- Tab icon -->
+    <link rel="icon" type="image/png" href="{{ '/vis/mec-mes.png' | relative_url }}" />
+
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+
+    <!-- Site stylesheets -->
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}" />
+  </head>
+  <body>
+    <h1>{{ site.title }}</h1>
+
+    <nav class="nav-home">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/cv' | relative_url }}">CV</a></li>
+      </ul>
+    </nav>
+
+    {{ content }}
+
+    <footer>
+      <a href="https://bsky.app/profile/ssorkhabi.bsky.social" class="social-icon" target="_blank" aria-label="Bluesky">
+        <i class="fa-brands fa-bluesky"></i>
+      </a>
+      <a href="mailto:ss3335@cam.ac.uk" class="social-icon" aria-label="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://github.com/ssorkhabi" class="social-icon" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+  </body>
+</html>
