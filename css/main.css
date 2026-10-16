@@ -108,7 +108,7 @@ h1 {
   position: sticky;
   top: 0px;
   border-bottom: 1px solid #d5d5d5;
-  background-color: #ffffff;
+  background-color: #f4f0ed;
   z-index: 1;
 }
 
@@ -193,13 +193,6 @@ p {
   margin-bottom: 5rem;
 }
 
-#plasmidsky {
-  margin: auto;
-  width: 50%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .research {
   font-size: 1em;
   line-height: 1.4em;
@@ -225,18 +218,10 @@ footer {
   position: fixed;
   width: 70%;
   border-top: 1px solid #d5d5d5;
-  background-color: #ffffff;
+  background-color: #f4f0ed;
 }
 
 /* CV */
-
-#image-Afra {
-  float: right;
-  margin-right: 4rem;
-  width: 25%;
-  border-radius: 50%;
-  margin-top: 8.5rem;
-}
 
 /* CV text */
 .short-cv {
@@ -301,83 +286,4 @@ footer {
 
 .bar-cv {
   color: #6e4755;
-}
-
-#download-cv a {
-  font-weight: 300;
-}
-
-/* BLOG */
-.slab {
-  width: 100%;
-  font-size: 5rem;
-  text-align: center;
-  line-height: 1.5em;
-  color: #212121;
-  font-family: "Adobe Garamond Pro";
-  padding-bottom: 0px;
-  margin-bottom: 1px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.slabRED {
-  width: 100%;
-  font-size: 4rem;
-  text-align: left;
-  line-height: 1.5em;
-  color: #612F53;
-  font-family: "Adobe Garamond Pro";
-  padding-bottom: 0px;
-  margin-bottom: -1px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.slab_date {
-  font-size: 1.6rem;
-  line-height: 1.2rem;
-  color: #a9a9a9;
-  text-align: center;
-  font-weight: 300;
-  font-family: "Helvetica", "Source Sans Pro", "Sans-Serif";
-  margin-bottom: 3rem;
-}
-
-.slab_paragraph {
-  /*For now it is the same as lighter*/
-  font-size: 2rem;
-  line-height: 1.5em;
-  color: #333;
-  font-family: "Adobe Garamond Pro";
-  width: 100%;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.slab_paragraph a {
-  font-family: "Adobe Garamond Pro";
-  font-weight: normal;
-  font-style: normal;
-}
-
-.slab_paragraph i {
-  font-family: "Adobe Garamond Pro";
-  font-style: italic;
-  font-weight: normal;
-}
-
-.hr_slab {
-  height: 1px;
-  background-color: #DBD4D0;
-  margin-top: 50px; /* This line does nothing */
-  margin: 0px;
-  width: 70%;
-  text-align: center;
-}
-
-.box {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 50px;
 }
