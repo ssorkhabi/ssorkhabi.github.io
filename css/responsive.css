@@ -1,10 +1,42 @@
 @media screen and (max-width: 768px) {
   body {
     width: 85%;
+    padding-bottom: 0;
   }
 
+  /* NAVIGATION: swap the top bar for a bar stuck to the bottom of the screen */
+
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-bar-bottom {
+    display: block;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background-color: var(--cream);
+  }
+
+  .nav-bar-bottom li {
+    margin: 0 1.2rem;
+  }
+
+  h1 {
+    margin-top: 3rem;
+    font-size: 3.2rem;
+  }
+
+  /* FOOTER: sits at the end of the page instead of floating */
+
   footer {
-    width: 85%;
+    position: static;
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
   }
 
   /* RESEARCH */
@@ -12,8 +44,6 @@
   .rsrcht {
     width: 100%;
     font-size: 3rem;
-    padding-bottom: 0;
-    margin-bottom: 1px;
   }
 
   .research-body {
