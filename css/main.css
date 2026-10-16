@@ -289,10 +289,11 @@ footer {
 
 /* CV uni names */
 .unis-cv {
-  font-family: "Adobe Garamond Pro", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   font-size: 2.1rem;
   margin-top: -0.2rem;
+  color: var(--text);
 }
 
 #cv-name {
@@ -300,6 +301,7 @@ footer {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: -1.5rem;
+  color: var(--text);
 }
 
 .bar-cv {
