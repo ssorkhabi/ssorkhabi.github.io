@@ -3,7 +3,6 @@
   --cream: #f4f0ed;
   --border: #d5d5d5;
   --text: #333;
-  --plum: #6a2b54;
   --sage: #9aa582;
   --sage-dark: #657359;
 }
@@ -98,7 +97,7 @@ a {
 }
 
 a:hover {
-  color: var(--plum);
+  color: var(--sage-dark);
 }
 
 .research-links {
@@ -152,7 +151,7 @@ nav a {
 p {
   font-size: 1.5rem;
   line-height: 1.4em;
-  color: var(--text);
+  color: var(--sage-dark);
   position: relative;
   text-align: left;
 }
@@ -177,7 +176,7 @@ p {
   margin: auto;
   margin-top: 5rem;
   font-size: 3.8rem;
-  color: var(--plum);
+  color: var(--sage-dark);
   font-family: "Adobe Garamond Pro", serif;
   text-align: center;
   font-weight: normal;
