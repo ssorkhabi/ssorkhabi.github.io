@@ -9,9 +9,6 @@ permalink: /cv/
   <img class="cv-photo" src="{{ '/vis/photo.png' | relative_url }}" alt="S. Wren Sorkhabi" />
 
   <div class="short-cv">
-    <ul>
-      <li id="cv-name">S. Wren Sorkhabi</li>
-    </ul>
 
     <ul>
       <li>
