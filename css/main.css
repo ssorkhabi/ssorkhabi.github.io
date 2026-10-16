@@ -1,3 +1,13 @@
+/* COLOURS */
+:root {
+  --cream: #f4f0ed;
+  --border: #d5d5d5;
+  --text: #333;
+  --plum: #6a2b54;
+  --sage: #9aa582;
+  --sage-dark: #657359;
+}
+
 /* FONTS */
 @font-face {
   font-family: "Adobe Garamond Pro";
@@ -50,35 +60,45 @@
 
 html {
   font-size: 10px;
+  background-color: var(--cream);
 }
 
-/* Detault parameters */
-
-* {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-size: rem;
-  text-decoration: none;
-  color: black;
-  font-weight: normal;
-  font-style: normal;
 }
 
 body {
-  margin: auto;
-  margin-bottom: 0px;
+  margin: 0 auto;
   width: 70%;
+  padding-bottom: 8rem; /* keeps the last paragraph clear of the fixed footer */
+  background-color: var(--cream);
+  color: black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+/* Let Markdown's *italic* and **bold** work */
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: 600;
 }
 
 /* Anchors */
 a {
   color: #a09b8a;
   font-weight: 600;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #6a2b54;
+  color: var(--plum);
 }
 
 .research-links {
@@ -88,57 +108,50 @@ a:hover {
 h1 {
   margin-top: -5px;
   font-size: 5.5rem;
-  font-family: "Source Sans Pro", "Sans-Serif";
-  font-style: normal;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   text-align: center;
 }
 
-.nav-bar {
-  font-family: "Source Sans Pro", "Helvetica", "Sans-Serif";
-  font-style: normal;
+/* NAVIGATION */
+
+nav {
   padding-bottom: 5px;
-  padding-top: 40px;
-  margin-top: 0px; /* Space between navegation bar and top of body*/
-  list-style: none;
+  margin-top: -30px;
   font-weight: 500;
-  font-size: large;
-  text-align: right;
+  text-align: center;
+  width: 100%;
   overflow: hidden;
-  position: sticky;
-  top: 0px;
-  border-bottom: 1px solid #d5d5d5;
-  background-color: #f4f0ed;
-  z-index: 1;
 }
 
-/* Navigation bar for computer format */
-.nav-bar-bottom {
-  display: none;
-}
-
-nav a {
-  z-index: 1;
-  font-size: 2rem;
+nav ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 nav li {
-  margin-top: -3rem;
+  display: inline-block;
+  margin: 10px;
 }
+
+nav a {
+  font-size: 2rem;
+}
+
+/* TEXT */
 
 .lighter {
   font-size: 1.7rem;
   line-height: 1.45em;
   width: 100%;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 p {
   font-size: 1.5rem;
   line-height: 1.4em;
-  color: #333;
+  color: var(--text);
   position: relative;
   text-align: left;
 }
@@ -163,11 +176,10 @@ p {
   margin: auto;
   margin-top: 5rem;
   font-size: 3.8rem;
-  color: #6a2b54;
-  font-family: "Adobe Garamond Pro", "Sans Serif";
+  color: var(--plum);
+  font-family: "Adobe Garamond Pro", serif;
   text-align: center;
   font-weight: normal;
-  font-style: normal;
 }
 
 /* Research paragraphs */
@@ -179,57 +191,73 @@ p {
 .rimg {
   width: 70%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 0rem;
+  margin: 2rem auto 0;
 }
 
 .separator {
-  margin: auto;
+  margin: 0 auto 5rem;
   display: flex;
   width: 18rem;
-  margin-top: 0rem;
-  margin-bottom: 5rem;
 }
 
 .research {
   font-size: 1em;
   line-height: 1.4em;
-  color: #333;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  color: var(--text);
   width: 100%;
 }
 
 hr {
   height: 1px;
-  background-color: #d5d5d5;
+  background-color: var(--border);
   border: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
+/* FOOTER */
+
 footer {
-  z-index: 1;
-  clear: both;
-  bottom: 0px;
   position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 70%;
-  border-top: 1px solid #d5d5d5;
-  background-color: #f4f0ed;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  background-color: var(--cream);
+}
+
+.social-icon {
+  display: inline-block;
+  padding: 20px 0;
+  width: 40px;
+  margin: 2px;
+  font-size: 20px;
+  text-align: center;
+  color: var(--sage);
+}
+
+.social-icon:hover {
+  color: var(--sage-dark);
 }
 
 /* CV */
 
-/* CV text */
 .short-cv {
   margin: 8rem 10rem 10rem 0;
 }
 
-/* CV text italic in about */
+.short-cv ul {
+  padding: 0;
+  margin: 2.2rem 0 4rem 3rem;
+  list-style: none;
+  display: block;
+}
+
 .short-cv li {
+  display: block;
   list-style: none;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -237,42 +265,23 @@ footer {
 
 /* CV titles */
 .title-cv {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-}
-
-/* CV text */
-.short-cv ul {
-  padding: 0;
-  margin-bottom: 4rem;
-  margin-top: 2.2rem;
-  margin-left: 3rem;
-  list-style: none;
-  display: block;
-}
-
-.short-cv li {
-  display: block;
 }
 
 /* CV dates */
 .dates-cv {
   display: inline-block;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 2.2rem;
   color: #6f2741;
 }
 
 /* CV uni names */
 .unis-cv {
-  font-family: "Adobe Garamond Pro", sans-serif;
+  font-family: "Adobe Garamond Pro", serif;
   font-weight: normal;
-  font-style: normal;
   font-size: 2.1rem;
   margin-top: -0.2rem;
 }
