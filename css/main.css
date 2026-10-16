@@ -1,7 +1,7 @@
 /* COLOURS */
 :root {
   --cream: #f4f0ed;
-  --border: #d5d5d5;
+  --border: #a09b8a;
   --text: #3B2500;
   --sage: #9aa582;
   --sage-dark: #657359;
@@ -106,7 +106,7 @@ h1 {
   font-size: 4rem;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  text-align: center;
+  text-align: left;
   color: var(--sage-dark);
 }
 
@@ -189,7 +189,7 @@ p {
   font-size: 3.8rem;
   color: var(--sage-dark);
   font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
 }
 
