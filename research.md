@@ -19,7 +19,7 @@ If the history of life were repeated, would it produce the same outcomes? Gould 
 {: .research}
 
 **Understanding responses to climate change**
-{: .rsrcht}
+{: .research}
 
 How relevant are mountain ranges when studying population persistence under climate change? Mountains compress environmental variation into short geographic distances, allowing adaptation across divergent environments to be studied at tractable spatial scales and, importantly, often in the presence of ongoing gene flow between markedly different habitats. But is the connection straightforward?
 {: .research}
