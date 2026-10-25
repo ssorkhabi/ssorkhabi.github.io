@@ -1,8 +1,5 @@
 /* TERMINAL THEME
-   A dark terminal window with a tmux-style status bar.
-   Everything is one monospace face; colour does the work that
-   weight and size used to do. Sage green carries over from the
-   old theme as the prompt / link colour. */
+   A dark terminal window with a tmux-style status bar. */
 
 /* COLOURS */
 :root {
