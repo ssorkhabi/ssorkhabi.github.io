@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: home
 ---
 
 I am a research assistant in the [Insect Evolution and Genomics Group](https://www.heliconius.zoo.cam.ac.uk/){:target="_blank"} at the Department of Zoology, University of Cambridge. I completed my master's (by research) in the same lab, studying the repeatability of adaptation to altitude in tropical butterflies. Before that, I worked on the role of sexual antagonism in wing shape evolution in *Drosophila melanogaster* in the [Reuter Lab](https://reuterlab.github.io/). More generally, I am interested in population genomics, evolutionary ecology, adaptation, and climate change. 
