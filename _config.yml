@@ -1,0 +1,12 @@
+title: s. wren sorkhabi
+email: ss3335@cam.ac.uk
+description: ""
+baseurl: ""
+url: "https://ssorkhabi.github.io"
+github_username: ssorkhabi
+bluesky_username: ssorkhabi.bsky.social
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
