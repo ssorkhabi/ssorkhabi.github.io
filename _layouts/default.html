@@ -33,10 +33,10 @@
     {% capture nav_links %}
       <span class="session">[sorkhabi]</span>
       <ul>
-        <li><a href="{{ '/' | relative_url }}" {% if page.title == "Home" %}class="active" aria-current="page"{% endif %}>0:home</a></li>
-        <li><a href="{{ '/research' | relative_url }}" {% if page.title == "Research" %}class="active" aria-current="page"{% endif %}>1:research</a></li>
-        <li><a href="{{ '/cv' | relative_url }}" {% if page.title == "CV" %}class="active" aria-current="page"{% endif %}>2:cv</a></li>
-        <li><a href="{{ '/miscellaneous' | relative_url }}" {% if page.title == "Miscellaneous" %}class="active" aria-current="page"{% endif %}>3:misc</a></li>
+        <li><a href="{{ '/' | relative_url }}" {% if page.title == "home" %}class="active" aria-current="page"{% endif %}>0:home</a></li>
+        <li><a href="{{ '/research' | relative_url }}" {% if page.title == "research" %}class="active" aria-current="page"{% endif %}>1:research</a></li>
+        <li><a href="{{ '/cv' | relative_url }}" {% if page.title == "cv" %}class="active" aria-current="page"{% endif %}>2:cv</a></li>
+        <li><a href="{{ '/miscellaneous' | relative_url }}" {% if page.title == "miscellaneous" %}class="active" aria-current="page"{% endif %}>3:misc</a></li>
       </ul>
     {% endcapture %}
 
