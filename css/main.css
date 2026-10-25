@@ -307,14 +307,21 @@ p {
 
 /* Divider between research projects, drawn with box characters */
 .separator {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   margin: 3.6rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-  color: var(--line);
 }
 
 .separator::before {
-  content: "────────────────────────────────────────────🐛────────────────────────────────────────────";
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+}
+
+.separator::after {
+  content: "\1F41B"; /* 🐛 */
+  font-size: 1.8rem;
 }
 
 hr {
