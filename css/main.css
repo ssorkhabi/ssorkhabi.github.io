@@ -305,18 +305,16 @@ p {
   font-weight: 400;
 }
 
-/* Divider between research projects, with a caterpillar in the middle */
+/* Divider between research projects, drawn with box characters */
 .separator {
   margin: 3.6rem 0;
-  text-align: center;
-  background: linear-gradient(var(--line), var(--line)) center / 100% 1px no-repeat;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--line);
 }
 
 .separator::before {
-  content: "\1F41B"; /* 🐛 */
-  padding: 0 1.2rem;
-  font-size: 1.8rem;
-  background-color: var(--screen);
+  content: "────────────────────────────────────────────────────────────────────────────────────────────";
 }
 
 hr {
