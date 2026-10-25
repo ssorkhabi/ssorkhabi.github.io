@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
     <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
     <!-- Tab icon -->
@@ -10,43 +11,78 @@
 
     <!-- Fonts and icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
     <!-- Site stylesheets -->
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}" />
   </head>
   <body>
+    {% comment %} Path shown in the prompt, e.g. ~/research {% endcomment %}
+    {% if page.url == "/" %}
+      {% assign cwd = "~" %}
+    {% else %}
+      {% assign slug = page.url | remove_first: "/" | remove: "/" | remove: ".html" %}
+      {% assign cwd = "~/" | append: slug %}
+    {% endif %}
+
+    {% capture ps1 %}<span class="ps1-user">guest@sorkhabi</span><span class="ps1-sep">:</span><span class="ps1-path">{{ cwd }}</span><span class="ps1-sep">$</span>{% endcapture %}
+
     {% capture nav_links %}
+      <span class="session">[sorkhabi]</span>
       <ul>
-        <li><a href="{{ '/' | relative_url }}" {% if page.title == "Home" %}class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/research' | relative_url }}" {% if page.title == "Research" %}class="active"{% endif %}>Research</a></li>
-        <li><a href="{{ '/cv' | relative_url }}" {% if page.title == "CV" %}class="active"{% endif %}>CV</a></li>
+        <li><a href="{{ '/' | relative_url }}" {% if page.title == "Home" %}class="active" aria-current="page"{% endif %}>0:home</a></li>
+        <li><a href="{{ '/research' | relative_url }}" {% if page.title == "Research" %}class="active" aria-current="page"{% endif %}>1:research</a></li>
+        <li><a href="{{ '/cv' | relative_url }}" {% if page.title == "CV" %}class="active" aria-current="page"{% endif %}>2:cv</a></li>
+        <li><a href="{{ '/miscellaneous' | relative_url }}" {% if page.title == "Miscellaneous" %}class="active" aria-current="page"{% endif %}>3:misc</a></li>
       </ul>
     {% endcapture %}
 
-    <!-- Top nav (computer) -->
-    <nav class="nav-bar">{{ nav_links }}</nav>
+    <!-- Status bar, tmux style (computer) -->
+    <nav class="nav-bar" aria-label="Main">{{ nav_links }}</nav>
 
-    {% if page.url == "/" %}
-      <h1>{{ site.title }}</h1>
-    {% endif %}
+    <main class="terminal">
+      <div class="titlebar" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="titlebar-text">guest@sorkhabi: {{ cwd }}</span>
+      </div>
 
-    {{ content }}
+      <div class="screen">
+        {% if page.url == "/" %}
+          <p class="prompt">{{ ps1 }} <span class="cmd">whoami</span></p>
+          <h1>{{ site.title }}</h1>
+          <p class="prompt">{{ ps1 }} <span class="cmd">cat about.md</span></p>
+        {% elsif page.command %}
+          <p class="prompt">{{ ps1 }} <span class="cmd">{{ page.command }}</span></p>
+        {% else %}
+          <p class="prompt">{{ ps1 }} <span class="cmd">cat {{ page.title | downcase }}.md</span></p>
+        {% endif %}
 
-    <footer>
-      <a href="https://bsky.app/profile/ssorkhabi.bsky.social" class="social-icon" target="_blank" aria-label="Bluesky">
-        <i class="fa-brands fa-bluesky"></i>
-      </a>
-      <a href="mailto:ss3335@cam.ac.uk" class="social-icon" aria-label="Email">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://github.com/ssorkhabi" class="social-icon" target="_blank" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </footer>
+        <div class="output">
+          {{ content }}
+        </div>
 
-    <!-- Bottom nav (phone) -->
-    <nav class="nav-bar-bottom">{{ nav_links }}</nav>
+        <footer>
+          <p class="prompt">{{ ps1 }} <span class="cmd">ls ~/links</span></p>
+          <div class="links">
+            <a href="https://bsky.app/profile/ssorkhabi.bsky.social" class="social-icon" target="_blank" rel="noopener">
+              <i class="fa-brands fa-bluesky" aria-hidden="true"></i> bluesky
+            </a>
+            <a href="mailto:ss3335@cam.ac.uk" class="social-icon">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i> email
+            </a>
+            <a href="https://github.com/ssorkhabi" class="social-icon" target="_blank" rel="noopener">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> github
+            </a>
+          </div>
+          <p class="prompt">{{ ps1 }} <span class="cursor" aria-hidden="true"></span></p>
+        </footer>
+      </div>
+    </main>
+
+    <!-- Status bar, tmux style (phone) -->
+    <nav class="nav-bar-bottom" aria-label="Main">{{ nav_links }}</nav>
   </body>
 </html>
