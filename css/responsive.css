@@ -1,83 +1,82 @@
 @media screen and (max-width: 768px) {
   body {
-    width: 85%;
-    padding-bottom: 0;
+    padding: 0 0 calc(4.4rem + env(safe-area-inset-bottom, 0px)); /* room for the status bar */
   }
 
-  /* NAVIGATION: swap the top bar for a bar stuck to the bottom of the screen */
+  /* NAVIGATION: the status bar moves to the bottom of the screen */
 
   .nav-bar {
     display: none;
   }
 
   .nav-bar-bottom {
-    display: block;
-    position: sticky;
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
     bottom: 0;
     z-index: 2;
-    padding: 2rem 0 1rem;
-    text-align: center;
-    border-top: 1px solid var(--border);
-    background-color: var(--cream);
+    padding: 1rem 1.6rem calc(1rem + env(safe-area-inset-bottom, 0px));
+    border-width: 1px 0 0;
+    font-size: 1.4rem;
   }
 
-  .nav-bar-bottom li {
-    margin: 0 1.2rem;
+  .nav-bar-bottom ul {
+    gap: 0.4rem 1.2rem;
+  }
+
+  /* The window fills the screen; no rounded frame */
+
+  .terminal {
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen {
+    padding: 2rem 1.6rem 2.4rem;
   }
 
   h1 {
-    margin-top: 3rem;
-    font-size: 3.2rem;
+    font-size: 2.6rem;
   }
 
-  /* FOOTER: sits at the end of the page instead of floating */
-
-  footer {
-    position: static;
-    width: 100%;
-    margin-top: 4rem;
-    text-align: center;
+  p,
+  .prompt,
+  .lighter,
+  .research {
+    font-size: 1.4rem;
   }
 
   /* RESEARCH */
 
   .rsrcht {
-    width: 100%;
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 
-  .research-body {
-    width: 100%;
+  /* CV: dates sit above each entry */
+
+  .short-cv li {
+    grid-template-columns: minmax(0, 1fr);
+    font-size: 1.4rem;
   }
 
-  .rimg {
-    height: auto;
-    width: 100%;
+  .dates-cv,
+  .bar-cv,
+  .title-cv,
+  .unis-cv {
+    grid-column: 1;
+    grid-row: auto;
+    font-size: 1.4rem;
   }
 
-  /* CV */
-
-  #cv-name {
-    text-align: center;
-    margin-top: -1rem;
-    margin-bottom: 2.5rem;
+  .bar-cv {
+    display: none;
   }
+}
 
-  .namecv {
-    font-size: x-large;
-    line-height: 1.4em;
-    color: var(--text);
-    position: relative;
-    text-align: left;
-    font-weight: 400;
-  }
-
-  .short-cv {
-    width: 100%;
-    margin: 4rem 0 10rem 0;
-  }
-
-  .short-cv ul {
-    margin-left: 0;
+@media screen and (max-width: 400px) {
+  .session {
+    display: none;
   }
 }
