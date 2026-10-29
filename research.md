@@ -29,7 +29,7 @@ How relevant are mountain ranges when studying population persistence under clim
 
 <div class="separator"></div>
 
-## The role of sexual antagonism in wing shape evolution
+## The genetic basis of sexual antagonism
 {: .rsrcht}
 
 Males and Females occupy different reproductive roles, and their success is determined by different, often conflicting selection pressures. How does this conflict manifest in the evolution of wing shape in _D. melanogaster_?
