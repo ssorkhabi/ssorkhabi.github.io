@@ -32,7 +32,7 @@ How relevant are mountain ranges when studying population persistence under clim
 ## The genetic basis of sexual antagonism
 {: .rsrcht}
 
-Males and Females occupy different reproductive roles, and their success is determined by different, often conflicting selection pressures. How does this conflict manifest in the evolution of wing shape in _D. melanogaster_?
+Males and Females occupy different reproductive roles, and their success is determined by different, often conflicting selection pressures. What can experimentally evolved populations of _D. melanogaster_ tell us about this conflict?
 {: .research}
 
 Chakraborty, A., Brandt, D. Y. C., Dhawanjewar, A., **Sorkhabi, S.**, Andrés, A. M., Reuter, M. _In prep_.
