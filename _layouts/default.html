@@ -24,8 +24,8 @@
     {% if page.url == "/" %}
       {% assign cwd = "~" %}
     {% else %}
-      {% assign slug = page.url | remove_first: "/" | remove: "/" | remove: ".html" %}
-      {% assign cwd = "~/" | append: slug %}
+         {% assign slug = page.url | remove: ".html" | split: "/" | join: "/" %}
+         {% assign cwd = "~" | append: slug %}
     {% endif %}
 
     {% capture ps1 %}<span class="ps1-user">guest@sorkhabi</span><span class="ps1-sep">:</span><span class="ps1-path">{{ cwd }}</span><span class="ps1-sep">$</span>{% endcapture %}
