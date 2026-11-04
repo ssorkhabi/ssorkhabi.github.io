@@ -55,6 +55,8 @@
           <p class="prompt">{{ ps1 }} <span class="cmd">whoami</span></p>
           <h1>{{ site.title }}</h1>
           <p class="prompt">{{ ps1 }} <span class="cmd">cat about.md</span></p>
+           {% elsif page.collection == "writings" %}
+          <p class="prompt">{{ ps1 }} <span class="cmd">cat {{ page.slug }}.md</span></p>
         {% elsif page.command %}
           <p class="prompt">{{ ps1 }} <span class="cmd">{{ page.command }}</span></p>
         {% else %}
