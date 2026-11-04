@@ -10,3 +10,15 @@ bluesky_username: ssorkhabi.bsky.social
 theme: minima
 plugins:
   - jekyll-feed
+  
+collections:
+  writings:
+    output: true
+    permalink: /miscellaneous/writings/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: writings
+    values:
+      layout: default
