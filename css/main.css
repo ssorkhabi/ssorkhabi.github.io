@@ -444,6 +444,8 @@ footer {
 .gallery-item img {
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   height: auto;
   border: 1px solid var(--line);
   transition: border-color 0.15s;
