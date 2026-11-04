@@ -1,0 +1,11 @@
+<div class="gallery">
+  {% for item in include.items %}
+    {% assign src = '/vis/' | append: include.folder | append: '/' | append: item.file | relative_url %}
+    <figure class="gallery-item">
+      <a href="{{ src }}" target="_blank" rel="noopener">
+        <img src="{{ src }}" alt="{{ item.alt | default: item.caption }}" loading="lazy" />
+      </a>
+      {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endfor %}
+</div>
