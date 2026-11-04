@@ -423,3 +423,31 @@ footer {
 .not-found {
   color: var(--rose);
 }
+
+/* MISCELLANEOUS: directory listing */
+.file-list { margin: 0 0 2.4rem; padding: 0; list-style: none; }
+.file-list li { margin-bottom: 0.6rem; }
+.file-note { color: var(--muted); }
+.file-date { color: var(--amber); font-variant-numeric: tabular-nums; margin-right: 1.2rem; }
+
+/* MISCELLANEOUS: photo and drawing galleries */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  align-items: start;
+  gap: 2.4rem;
+  margin: 0.8rem 0 3.2rem;
+}
+.gallery-item { margin: 0; }
+.gallery-item a,
+.gallery-item a:hover { display: block; background: none; }
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  transition: border-color 0.15s;
+}
+.gallery-item a:hover img { border-color: var(--sage); }
+.gallery-item figcaption { margin-top: 0.8rem; font-size: 1.3rem; line-height: 1.5; color: var(--muted); }
+.gallery-item figcaption::before { content: "# "; }
